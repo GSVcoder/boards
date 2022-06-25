@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: calc(100% + 20vw);
+  text-align: center;
+  border: solid 1px black;
+  background-color: #f4f4f4;
+}
+
+.aside-left {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  border: solid 1px black;
+  z-index: 1;
+  background-color: #f4f4f4;
+}
+
+.boards {
+  display: flex;
+  flex-direction: column;
+}
+.boards .boards-ul {
+  list-style: none;
+  margin: 25% 10%;
+}
+.boards .boards-li {
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+}
+.boards .boards-li-delBtn {
+  margin-left: auto;
+  margin-right: 2%;
+}
+.boards .boards-li-delBtn,
+.boards .boards-li-editBtn,
+.boards .createBoard {
+  background-color: #f4f4f4;
+  border: none;
+  border: solid 0.5px black;
+  border-radius: 5px;
+  padding: 3px 5px;
+  cursor: pointer;
+}
+.boards .boards-li-delBtn:hover,
+.boards .boards-li-editBtn:hover {
+  background-color: white;
+  border-color: white;
+}
+.boards .createBoard {
+  margin-top: 5%;
+}
+.boards .createBoard:hover {
+  background-color: white;
+}
+
+.aside-right {
+  position: fixed;
+  top: 8vh;
+  left: 20vw;
+  width: calc(100% - 20vw);
+}
+.aside-right .boards-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aside-right .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  overflow: scroll;
+  gap: 1%;
+}
+.aside-right .addTopic {
+  height: 84vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
+  margin-left: 3%;
+  cursor: pointer;
+}
+.aside-right .addTopic:hover {
+  background-color: grey;
+}
+.aside-right .topics {
+  border: solid 1px black;
+}
+.aside-right .note {
+  border: solid black 1px;
+  padding: 1%;
+  margin: 5%;
+  overflow: scroll;
+  height: 26vh;
+}
+.aside-right .newNote .newNotDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+.aside-right .newNote .newNotDiv:hover {
+  background-color: grey;
+}
+
+label,
+input[type=checkbox] {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .boards-li {
+    flex-direction: column;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 5% 0;
+  }
+
+  .boards .boards-li-delBtn {
+    margin-left: 0;
+    margin-right: 0;
+    margin-block: 5%;
+  }
+}/*# sourceMappingURL=style.css.map */
