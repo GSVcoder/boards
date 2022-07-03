@@ -1,5 +1,7 @@
 const ulBoard = document.querySelector(".boards-ul");
 const addBoardBtn = document.querySelector(".createBoard");
+const grid = document.querySelector(".grid");
+grid;
 
 // CHECK BOARD INPUT
 addBoardBtn.addEventListener("keypress", (event) => {
@@ -44,6 +46,33 @@ ulBoard.addEventListener("click", (e) => {
     } else {
       e.target.parentElement.children[0].textContent = editBtnValue;
       editBtn.value = "";
+    }
+  }
+});
+
+grid.addEventListener("click", (e) => {
+  // CREATE TOPIC
+  if (e.target.classList.contains("plus")) {
+    const topicName = document.querySelector(".topicName");
+    if (topicName.value === "") {
+      return null;
+    } else {
+      const topicsDiv = document.createElement("div");
+      topicsDiv.classList.add("topics");
+      const h3 = document.createElement("h3");
+      h3.textContent = topicName.value;
+      const newNote = document.createElement("div");
+      newNote.classList.add("note", "newNote");
+      const newNoteDiv = document.createElement("div");
+      newNoteDiv.classList.add("newNotDiv");
+      const h1 = document.createElement("h1");
+      h1.textContent = "+";
+      newNoteDiv.append(h1);
+      newNote.append(newNoteDiv);
+      topicsDiv.append(h3, newNote);
+      e.target.parentElement.parentElement.append(topicsDiv);
+
+      topicName.value = "";
     }
   }
 });

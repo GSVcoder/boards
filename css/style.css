@@ -90,24 +90,51 @@ body {
 }
 .aside-right .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   overflow: scroll;
+  z-index: 5;
   gap: 1%;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(160px, 1fr);
+  overflow-x: auto;
 }
 .aside-right .addTopic {
   height: 84vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border: solid 1px black;
   margin-left: 3%;
+  margin-top: 2vh;
+  margin: 2vh 0;
+  margin-left: 1vw;
+}
+.aside-right .addTopic .topicName {
+  display: block;
+  width: 90%;
+}
+.aside-right .addTopic h1 {
+  margin-top: 2vh;
+  font-size: 30px;
+  width: 14%;
+  text-align: center;
+  align-self: center;
+  align-self: center;
+  display: flex;
+  padding-left: 0.3vw;
   cursor: pointer;
 }
-.aside-right .addTopic:hover {
+.aside-right .addTopic h1:hover {
   background-color: grey;
+  border-radius: 100px;
 }
 .aside-right .topics {
   border: solid 1px black;
+  margin: 2vh 0;
+}
+.aside-right .topics h3 {
+  margin: 1vh 1vw 2vh 1vw;
 }
 .aside-right .note {
   border: solid black 1px;
