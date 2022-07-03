@@ -60,13 +60,15 @@ body {
 
   .boards-li-delBtn,
   .boards-li-editBtn,
-  .createBoard {
+  .createBoard,
+  .editDiv {
     background-color: #f4f4f4;
     border: none;
     border: solid 0.5px black;
     border-radius: 5px;
     padding: 3px 5px;
     cursor: pointer;
+    display: block;
   }
 
   .boards-li-delBtn:hover,
@@ -75,7 +77,8 @@ body {
     border-color: white;
   }
 
-  .createBoard:hover {
+  .createBoard:hover,
+  .editDiv:hover {
     background-color: white;
   }
 }

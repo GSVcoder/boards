@@ -2,18 +2,15 @@ const ulBoard = document.querySelector(".boards-ul");
 const addBoardBtn = document.querySelector(".createBoard");
 
 // CHECK BOARD INPUT
-addBoardBtn.addEventListener("click", (e) => {
-  console.log(e);
-  addBoardBtn.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-      if (addBoardBtn.value === "") {
-        alert("No Task");
-      } else {
-        createNote();
-        addBoardBtn.value = "";
-      }
+addBoardBtn.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    if (addBoardBtn.value === "") {
+      alert("No Task");
+    } else {
+      createNote();
+      addBoardBtn.value = "";
     }
-  });
+  }
 });
 
 // CREATE BOARDS
@@ -32,9 +29,21 @@ const createNote = (e) => {
   document.querySelector(".boards-ul").append(li);
 };
 
-// DEL BOARDS
 ulBoard.addEventListener("click", (e) => {
+  // DEL BOARDS
   if (e.target.classList.contains("boards-li-delBtn")) {
     e.target.parentElement.remove();
+  }
+
+  // EDIT BOARD NAME
+  if (e.target.classList.contains("boards-li-editBtn")) {
+    const editBtn = document.querySelector(".editDiv");
+    const editBtnValue = editBtn.value;
+    if (editBtnValue === "") {
+      return null;
+    } else {
+      e.target.parentElement.children[0].textContent = editBtnValue;
+      editBtn.value = "";
+    }
   }
 });

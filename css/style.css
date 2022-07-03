@@ -57,23 +57,23 @@ body {
 }
 .boards .boards-li-delBtn,
 .boards .boards-li-editBtn,
-.boards .createBoard {
+.boards .createBoard,
+.boards .editDiv {
   background-color: #f4f4f4;
   border: none;
   border: solid 0.5px black;
   border-radius: 5px;
   padding: 3px 5px;
   cursor: pointer;
+  display: block;
 }
 .boards .boards-li-delBtn:hover,
 .boards .boards-li-editBtn:hover {
   background-color: white;
   border-color: white;
 }
-.boards .createBoard {
-  margin-top: 5%;
-}
-.boards .createBoard:hover {
+.boards .createBoard:hover,
+.boards .editDiv:hover {
   background-color: white;
 }
 
