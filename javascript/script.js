@@ -76,7 +76,7 @@ grid.addEventListener("click", (e) => {
     }
   }
 
-  // // EDIT TOPIC NAME
+  // EDIT TOPIC NAME
   if (e.target.classList.contains("h3Name")) {
     const topicNameEdit = document.querySelector(".topicNameEdit");
     if (topicNameEdit.value === "") {
@@ -86,5 +86,24 @@ grid.addEventListener("click", (e) => {
       topicNameEdit.value = "";
     }
   }
-  console.log(e.target);
+
+  // CREATE TASK
+  if (
+    e.target.classList.contains("h1PlusNew") &&
+    e.target.parentElement.classList.contains("newNotDiv")
+  ) {
+    // const main = document.createElement("div");
+    // main.classList.add("note", "newNote");
+    // const subMain = document.createElement("div");
+    // subMain.classList.add("newNotDiv");
+    // const h1 = document.createElement("h1");
+    // h1.classList.add("h1PlusNew");
+    // h1.textContent = "+";
+    // subMain.append(h1);
+    // main.append(subMain);
+    // document.querySelector(".topics").append(main);
+    // console.log(subMain.classList);
+  }
+
+  // console.log(e.target.parentElement);
 });
