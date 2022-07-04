@@ -9,14 +9,14 @@ addBoardBtn.addEventListener("keypress", (event) => {
     if (addBoardBtn.value === "") {
       alert("No Task");
     } else {
-      createNote();
+      createBoards();
       addBoardBtn.value = "";
     }
   }
 });
 
 // CREATE BOARDS
-const createNote = (e) => {
+const createBoards = (e) => {
   const li = document.createElement("li");
   li.classList.add("boards-li");
   const h3 = document.createElement("H3");

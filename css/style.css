@@ -172,4 +172,11 @@ input[type=checkbox] {
     margin-right: 0;
     margin-block: 5%;
   }
+}
+.hide {
+  display: none !important;
+}
+
+.block {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
