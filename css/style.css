@@ -133,7 +133,7 @@ body {
   border: solid 1px black;
   margin: 2vh 0;
 }
-.aside-right .topics h3 {
+.aside-right .topics .h3Name {
   margin: 1vh 1vw 2vh 1vw;
 }
 .aside-right .note {

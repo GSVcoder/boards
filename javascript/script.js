@@ -61,6 +61,7 @@ grid.addEventListener("click", (e) => {
       topicsDiv.classList.add("topics");
       const h3 = document.createElement("h3");
       h3.textContent = topicName.value;
+      h3.classList.add("h3Name");
       const newNote = document.createElement("div");
       newNote.classList.add("note", "newNote");
       const newNoteDiv = document.createElement("div");
@@ -71,8 +72,15 @@ grid.addEventListener("click", (e) => {
       newNote.append(newNoteDiv);
       topicsDiv.append(h3, newNote);
       e.target.parentElement.parentElement.append(topicsDiv);
-
       topicName.value = "";
     }
   }
+});
+
+// EDIT TOPIC NAME
+const h3Topic = document.querySelector(".h3Name");
+h3Topic.addEventListener("dblclick", (e) => {
+  const topicNameEdit = document.querySelector(".topicNameEdit");
+  e.target.textContent = topicNameEdit.value;
+  topicNameEdit.textContent = "";
 });
