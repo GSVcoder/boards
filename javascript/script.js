@@ -75,12 +75,16 @@ grid.addEventListener("click", (e) => {
       topicName.value = "";
     }
   }
-});
 
-// EDIT TOPIC NAME
-const h3Topic = document.querySelector(".h3Name");
-h3Topic.addEventListener("dblclick", (e) => {
-  const topicNameEdit = document.querySelector(".topicNameEdit");
-  e.target.textContent = topicNameEdit.value;
-  topicNameEdit.textContent = "";
+  // // EDIT TOPIC NAME
+  if (e.target.classList.contains("h3Name")) {
+    const topicNameEdit = document.querySelector(".topicNameEdit");
+    if (topicNameEdit.value === "") {
+      return;
+    } else {
+      e.target.textContent = topicNameEdit.value;
+      topicNameEdit.value = "";
+    }
+  }
+  console.log(e.target);
 });
