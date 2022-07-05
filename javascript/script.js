@@ -92,16 +92,16 @@ grid.addEventListener("click", (e) => {
     e.target.classList.contains("h1PlusNew") &&
     e.target.parentElement.classList.contains("newNotDiv")
   ) {
-    // const main = document.createElement("div");
-    // main.classList.add("note", "newNote");
-    // const subMain = document.createElement("div");
-    // subMain.classList.add("newNotDiv");
-    // const h1 = document.createElement("h1");
-    // h1.classList.add("h1PlusNew");
-    // h1.textContent = "+";
-    // subMain.append(h1);
-    // main.append(subMain);
-    // document.querySelector(".topics").append(main);
+    const main = document.createElement("div");
+    main.classList.add("note", "newNote");
+    const subMain = document.createElement("div");
+    subMain.classList.add("newNotDiv");
+    const h1 = document.createElement("h1");
+    h1.classList.add("h1PlusNew");
+    h1.textContent = "+";
+    subMain.append(h1);
+    main.append(subMain);
+    document.querySelector(".topics").append(main);
     // console.log(subMain.classList);
   }
 
